@@ -1,0 +1,2 @@
+2021-11-20_lunch_2_cam0.json filter=lfs diff=lfs merge=lfs -text
+images/*.jpg filter=lfs diff=lfs merge=lfs -text
