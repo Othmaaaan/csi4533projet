@@ -41,7 +41,7 @@ def predict_bbox(tracklet):
     return predicted_bbox
 
 # Charger le fichier d'annotations
-annotations_file = '/Users/macbookair/Downloads/2021-11-20_lunch_2_cam0.json'
+annotations_file = '2021-11-20_lunch_2_cam0.json'
 with open(annotations_file, 'r') as f:
     annotations = json.load(f)
 
@@ -139,7 +139,7 @@ for tracklet in finished_tracklets:
 
 # Sauvegarder le résultat dans un fichier JSON
 output = {"tracklets": valid_tracklets}
-output_file = '/Users/macbookair/Downloads/output.json'
+output_file = 'output.json'
 with open(output_file, 'w') as f:
     json.dump(output, f)
 
