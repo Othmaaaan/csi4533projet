@@ -184,7 +184,7 @@ for frame in frames:
             cv2.rectangle(
                 img,
                 (int(x), int(y)),
-                (int(x + w), int(y + h)),
+                (int(w), int(h)),
                 (0, 255, 0),  # couleur vert (BGR)
                 2             # épaisseur
             )
