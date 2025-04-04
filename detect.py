@@ -1,6 +1,6 @@
 import json
 import os
-import cv2  # <-- Nécessaire pour lire/écrire des images et dessiner
+import cv2
 import numpy as np
 from collections import defaultdict
 
@@ -157,11 +157,9 @@ for frame in frames:
     print(f"Tracklets actifs après association : {len(active_tracklets)}")
     
     #--------------------------------------------------------------------------
-    # [NOUVEAU] Génération et enregistrement de l'image avec les boîtes englobantes
+    # Génération et enregistrement de l'image avec les boîtes englobantes
     #--------------------------------------------------------------------------
     
-    # On suppose que le champ "file_name" existe dans "frame" et contient le nom du fichier image
-    # Adapte le chemin si tes images sont dans un autre dossier
     file_name_fix = frame["file_name"].split("/")[-1]
     image_path = os.path.join("images", file_name_fix)
     img = cv2.imread(image_path)
